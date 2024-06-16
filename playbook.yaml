@@ -1,0 +1,12 @@
+---
+- name: test
+  hosts: all
+
+  tasks:
+  - name: run whoami
+    command: whoami
+    register: result
+
+  - name: debug
+    debug:
+      msg: "{{  result }}"
